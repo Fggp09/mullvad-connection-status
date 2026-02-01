@@ -23,19 +23,29 @@ const ICON_CONFIGS = [
     input: 'shield_encrypted.svg',
     output: 'tray-connected.png',
     color: '#44ad4d', // Mullvad green
-    description: 'Connected state'
+    description: 'Connected state',
+    size: 32
   },
   {
     input: 'shield_question.svg',
     output: 'tray-disconnected.png',
     color: '#e34039', // Mullvad red
-    description: 'Disconnected state'
+    description: 'Disconnected state',
+    size: 32
   },
   {
     input: 'shield_question.svg',
     output: 'tray-unknown.png',
     color: '#294d73', // Mullvad blue
-    description: 'Unknown state'
+    description: 'Unknown state',
+    size: 32
+  },
+  {
+    input: 'shield_encrypted.svg',
+    output: 'icon.png',
+    color: '#294d73', // Mullvad blue for app icon
+    description: 'Application window icon',
+    size: 256
   }
 ];
 
@@ -45,6 +55,7 @@ const ICON_CONFIGS = [
 async function generateIcon(config) {
   const inputPath = path.join(SRC_DIR, config.input);
   const outputPath = path.join(DEST_DIR, config.output);
+  const size = config.size || ICON_SIZE;
 
   console.log(`Generating ${config.description}: ${config.output}`);
 
@@ -54,7 +65,7 @@ async function generateIcon(config) {
 
   // Convert to PNG
   await sharp(Buffer.from(svgContent))
-    .resize(ICON_SIZE, ICON_SIZE)
+    .resize(size, size)
     .png()
     .toFile(outputPath);
 

@@ -295,7 +295,7 @@ pub fn run() {
             // Set window icon for taskbar
             #[cfg(target_os = "windows")]
             {
-                let icon_path = std::path::Path::new("icons").join("icon.ico");
+                let icon_path = std::path::Path::new("icons").join("icon.png");
                 if let Ok(icon_bytes) = std::fs::read(&icon_path) {
                     if let Ok(icon) = Image::from_bytes(&icon_bytes) {
                         let _ = window.set_icon(icon);
