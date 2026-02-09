@@ -13,6 +13,7 @@ import { useEffect, useState } from 'react';
 import { invoke } from '@tauri-apps/api/core';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch';
+import { useDarkMode } from '@/hooks/useDarkMode';
 
 /**
  * Settings component with application configuration options
@@ -21,6 +22,7 @@ import { Switch } from '@/components/ui/switch';
 export function Settings() {
   const [autoStartEnabled, setAutoStartEnabled] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const { isDark, toggleDarkMode } = useDarkMode();
 
   // Check current auto-start status on mount
   useEffect(() => {
@@ -79,6 +81,21 @@ export function Settings() {
             checked={autoStartEnabled}
             onCheckedChange={handleToggleAutoStart}
             disabled={isLoading}
+            className="ml-4"
+          />
+        </div>
+
+        <div className="flex items-center justify-between p-3 rounded-lg hover:bg-muted/30 transition-colors">
+          <div className="space-y-1 flex-1">
+            <label htmlFor="dark-mode" className="text-sm font-semibold cursor-pointer block">
+              Dark Mode
+            </label>
+            <p className="text-xs text-muted-foreground">Switch between light and dark theme</p>
+          </div>
+          <Switch
+            id="dark-mode"
+            checked={isDark}
+            onCheckedChange={toggleDarkMode}
             className="ml-4"
           />
         </div>
